@@ -86,25 +86,25 @@ function UpdateUser({selectedoption,userData,setUserData}) {
         <form onSubmit={updateuserDetails}>
        <label>UserName:&nbsp;&nbsp;&nbsp;&nbsp;
         <input value={editedUserName} onChange={(e)=>setEditedUserName(e.target.value)}>
-        </input></label>
+        </input></label><br /><br />
         <label>
             Email:&nbsp;&nbsp;&nbsp;&nbsp;<input value={editedEmail} onChange={(e)=>setEditedEmail(e.target.value)} ></input>
-        </label>
+        </label><br /><br />
         <label>
             Phone No:&nbsp;&nbsp;&nbsp;&nbsp;<input value={editedPhone} onChange={(e)=>setEditedPhone(e.target.value)} ></input>
-        </label>
+        </label><br /><br />
         <label>
             Age:&nbsp;&nbsp;&nbsp;&nbsp;<input value={editedAge} onChange={(e)=>setEditedAge(e.target.value)} ></input>
-        </label>
+        </label><br /><br />
         <label>
             Gender:&nbsp;&nbsp;&nbsp;&nbsp;<input value={editedGender} onChange={(e)=>setEditedGender(e.target.value)} ></input>
-        </label>
+        </label><br /><br />
         <label>
             Education:&nbsp;&nbsp;&nbsp;&nbsp;<input value={editedEducation} onChange={(e)=>setEditedEducation(e.target.value)} ></input>
-        </label>
+        </label><br /><br />
         <label>
             Job Role:&nbsp;&nbsp;&nbsp;&nbsp;<input value={editedJobRole} onChange={(e)=>setEditedJobRole(e.target.value)} ></input>
-        </label>
+        </label><br /><br />
         <label>
             Exp:&nbsp;&nbsp;&nbsp;&nbsp;<input value={editedExp} onChange={(e)=>setEditedExp(e.target.value)} ></input>
             
@@ -112,9 +112,7 @@ function UpdateUser({selectedoption,userData,setUserData}) {
         <label>
             Address:&nbsp;&nbsp;&nbsp;&nbsp;<input value={editedAddress} onChange={(e)=>setEditedAddress(e.target.value)} ></input>
             
-        </label>
-        <br/>
-        <br />
+        </label><br />
         <button type='submit'>Update User Profile</button>
 
       </form>
