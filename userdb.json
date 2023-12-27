@@ -1,0 +1,64 @@
+{
+  "userData": [
+    {
+      "id": 1,
+      "username": "Sankar",
+      "email": "Sankar@gmail.com",
+      "phone": "8850653424",
+      "age": 56,
+      "gender": "Male",
+      "Education": "Bsc.cs",
+      "JobRole": "Php Developer",
+      "Exp": "3Years",
+      "Address": "Madurai"
+    },
+    {
+      "id": 2,
+      "username": "Shakthi",
+      "email": "shakthi@gmail.com",
+      "phone": "8765454323",
+      "age": 32,
+      "gender": "Male",
+      "Education": "MBA",
+      "JobRole": ".Net Developer",
+      "Exp": "2Years",
+      "Address": "Trichy"
+    },
+    {
+      "id": 3,
+      "username": "Mathavan",
+      "email": "mathavan@gmail.com",
+      "phone": "8987787656",
+      "age": 24,
+      "gender": "Male",
+      "Education": "",
+      "JobRole": "WDWQDDW",
+      "Exp": "",
+      "Address": ""
+    },
+    {
+      "id": 4,
+      "username": "Govindan",
+      "email": "govindan@gmail.com",
+      "phone": "7876565343",
+      "age": "35",
+      "gender": "",
+      "Education": "Diploma",
+      "JobRole": "Php Developer",
+      "Exp": "Four Years",
+      "Address": "Ramanathapuram"
+    },
+    {
+      "id": 6,
+      "username": "Harini",
+      "email": "hari@gmail.com",
+      "phone": "9952116934",
+      "age": "23",
+      "gender": "Female",
+      "Education": "Bcom",
+      "JobRole": "Digital Marketing",
+      "Exp": "Three Years",
+      "Address": "Kallakurichi"
+    }
+  ]
+}

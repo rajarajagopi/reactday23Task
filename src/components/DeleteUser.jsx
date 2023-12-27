@@ -1,0 +1,75 @@
+import axios from 'axios';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+function DeleteForm({ selectedoption, userData, setUserData})
+ {
+    
+    let selectedUser = userData.find(user => user.id == selectedoption);
+    const navigate = useNavigate();
+    const deleteUser =async () => {
+        console.log('Deleting the user.....!');
+        try{
+            const response = await axios.delete(`http://localhost:3000/userData/${selectedoption}`);
+            console.log('User deleted successfully');
+            console.log(response);
+            let updatedUser = userData.filter(user => user.id !== selectedUser.id);
+            setUserData(updatedUser);
+            navigate('/editUser');
+        }
+        catch (error){
+            console.log('Error deleting the User:', error);
+        }
+    }
+    return (
+    <div>
+      <div>
+            <br /><br />
+            <label>
+                ID: {selectedUser.id} <br /><br />
+                UserName: {selectedUser.username}<br /><br />
+                Email: {selectedUser.email}<br /><br />
+                Phone No: {selectedUser.phone}<br /><br />
+                Age: {selectedUser.age}<br /><br />
+                Gender: {selectedUser.gender}<br /><br />
+                Education: {selectedUser.Education}<br /><br />
+                Experience: {selectedUser.Exp}<br /><br />
+                Address: {selectedUser.Address}<br /><br />
+                
+            </label> 
+            <br /><br />
+            <button onClick={deleteUser}>Delete User</button>
+        </div>
+    </div>
+  )
+}
+
+function DeleteUser ({userData,setUserData}){
+    const [selectedoption, setSelectedoption] = useState('select an ID');
+    const selectHandler = (event) => {
+        // console.log(event.target.value);
+        setSelectedoption(event.target.value);
+    }
+    return (
+        <div>
+          <h2>Delete User</h2>
+          <label>
+              Select the User ID to Edit/Update: &nbsp;&nbsp;
+              <select onChange={selectHandler} value={selectedoption}>
+                  <option disabled>{ 'select an ID' }</option>
+                  {
+                      userData.map(user => 
+                          <option key={user.id}>{ user.id }</option>
+                      )
+                  }
+              </select>
+          </label>
+
+          <div>
+                {selectedoption !== 'select an ID' && <DeleteForm selectedoption={selectedoption} userData={userData} setUserData={ setUserData } /> }
+          </div>
+    </div>
+    )
+
+}
+export default DeleteUser;
